@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - .:/seaography-mysql-example
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+  db:
+    image: mysql:8
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 30s
+      retries: 3
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
