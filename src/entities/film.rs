@@ -22,7 +22,7 @@ pub struct Model {
     pub replacement_cost: Decimal,
     pub rating: Option<Rating>,
     #[sea_orm(
-        column_type = "custom(\"SET ('Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes')\")",
+        // column_type = "custom(\"SET ('Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes')\")",
         nullable
     )]
     pub special_features: Option<String>,
