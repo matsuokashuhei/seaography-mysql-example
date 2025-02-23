@@ -29,3 +29,9 @@ sea-orm-cli generate entity -o src/entities -u mysql://user:pwd@db/sakila --seao
 ```
 seaography-cli ./ src/entities mysql://user:pwd@db/sakila seaography-mysql-example
 ```
+
+### 4. cargo run
+
+```
+URL=0.0.0.0:8000 cargo run
+```
