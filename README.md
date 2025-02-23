@@ -27,6 +27,5 @@ sea-orm-cli generate entity -o src/entities -u mysql://user:pwd@db/sakila --seao
 ### 3. Call `seaography-cli`
 
 ```
-seaography-cli ./ src/entities postgres://user:pw@localhost/sakila seaography-postgres-example
-cargo run
+seaography-cli ./ src/entities mysql://user:pwd@db/sakila seaography-mysql-example
 ```
