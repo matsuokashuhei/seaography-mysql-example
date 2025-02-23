@@ -20,7 +20,7 @@ curl -sL https://raw.githubusercontent.com/SeaQL/seaography/refs/heads/main/exam
 ### 2. Call `sea-orm-cli generate entity`
 
 ```
-sea-orm-cli generate entity -o src/entities -u postgres://user:pw@localhost/sakila --seaography
+sea-orm-cli generate entity -o src/entities -u mysql://user:pwd@db/sakila --seaography
 ```
 
 
